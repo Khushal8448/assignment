@@ -189,3 +189,31 @@ This repository contains a simple demonstration of a RESTful API built using Exp
     "updatedAt": "2024-07-02T11:47:49.164Z"
   }
   ```
+  
+### Get Product Details
+
+#### POST /api/products/:productId
+
+- Request Header:
+
+  ```
+  {
+    Authorization: `Bearer ${jwtToken}`,
+  }
+  ```
+
+- Response json:
+  ```
+  {
+    "id": 4,
+    "name": "Ergonomic Office Chair",
+    "brand": "ComfortSeating",
+    "description": "Adjustable ergonomic office chair with lumbar support and breathable mesh backrest.",
+    "price": "149.99",
+    "quantity": 300,
+    "category": "Household",
+    "createdAt": "2024-07-02T11:47:49.164Z",
+    "updatedAt": "2024-07-02T11:47:49.164Z"
+  }
+  ```
+
