@@ -5,13 +5,14 @@ This repository contains a simple demonstration of a RESTful API built using Exp
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Running the Server](#running-the-server)
-- [User API Endpoints](#api-endpoints)
+
+- [User API Endpoints](#userapi-endpoints)
   - [POST /api/users/register](#post-registeruser)
   - [POST /api/users/login](#post-loginuser)
-- [Product API Endpoints](#api-endpoints)
+- [Product API Endpoints](#productapi-endpoints)
   - [POST /api/products/](#get-addNewProduct)
   - [GET /api/products/](#get-getAllProducts)
   - [GET /api/products/:productId](#post-getProductDetails)
@@ -34,3 +35,19 @@ This repository contains a simple demonstration of a RESTful API built using Exp
    git clone <repository-url>
    cd express-rest-api-demo
    ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Setting Up .env file:
+   ```
+   PORT=
+   JWT_SECRET=
+   DATABASE_URL=
+   ```
+4. Running the Server:
+   ```
+   npm start
+   ```
+
+## User API Endpoints
