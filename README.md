@@ -267,6 +267,10 @@ This repository contains a simple demonstration of a RESTful API built using Exp
     Authorization: `Bearer ${jwtToken}`,
   }
   ```
+## Build With
+
+[![My Skills](https://skillicons.dev/icons?i=express,typescript,prisma,postgresql)](https://skillicons.dev)
+
 ## Contact
 
 - **Email:** [Email Here](mailto:khushalmali8448@gmail.com)
