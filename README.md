@@ -19,7 +19,6 @@ This repository contains a simple demonstration of a RESTful API built using Exp
   - [GET /api/products/:productId](#post-getProductDetails)
   - [PUT /api/products/:productId](#put-updateProductDetails)
   - [DELETE /api/products/:productId](#delete-deleteProduct)
-- [Error Handling](#error-handling)
 - [Built With](#built-with)
 - [Contact](#contact)
 
