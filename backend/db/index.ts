@@ -1,5 +1,10 @@
-const { PrismaClient } = require("@prisma/client");
+import { PrismaClient } from "@prisma/client";
 
+declare global {
+  var cachedPrisma: PrismaClient;
+}
+
+let prisma: PrismaClient;
 if (process.env.NODE_ENV === "production") {
   prisma = new PrismaClient();
 } else {
@@ -10,6 +15,4 @@ if (process.env.NODE_ENV === "production") {
   prisma = global.cachedPrisma;
 }
 
-const db = prisma;
-
-module.exports = db;
+export const db = prisma;

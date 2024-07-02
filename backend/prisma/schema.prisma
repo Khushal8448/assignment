@@ -13,26 +13,33 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Category {
+  FoodBeverages
+  PersonalCare
+  Electronics
+  Healthcare
+  Household
+  ApparelFootwear
+}
+
 model User {
-  id        Int       @id @default(autoincrement())
-  email     String    @unique
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
   password  String
   name      String
-  pics      String    @default("https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg")
-  todos     Product[]
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  pics      String   @default("https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Product {
   id          Int      @id @default(autoincrement())
   name        String
+  brand       String
   description String
-  price       Int
+  price       String
   quantity    Int
-  userId      Int
-  category    Int
-  user        User     @relation(fields: [userId], references: [id])
+  category    Category
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
