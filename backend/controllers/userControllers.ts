@@ -37,7 +37,6 @@ export const registerUser = async (req: Request, res: Response) => {
         name: user.name,
         email: user.email,
         pics: user.pics,
-        password: user.password,
         token: generateToken(user.id),
       });
     } else {

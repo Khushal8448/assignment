@@ -49,5 +49,59 @@ This repository contains a simple demonstration of a RESTful API built using Exp
    ```
    npm start
    ```
+5. Prisma client generate:
+   ```
+   npx prisma generate
+   ```
 
 ## User API Endpoints
+
+#### POST /api/users/register
+
+- Creates a new user.
+
+- Request Body:
+
+  ```
+  {
+    "name": "navin",
+    "email": "navin@gmail.com",
+    "password": "123456"
+  }
+  ```
+
+- Response json:
+  ```
+  {
+     "id": 5,
+     "name": "navin",
+     "email": "navin@gmail.com",
+     "pics": "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzE5OTE5MzM3LCJleHAiOjE3MjEyMTUzMzd9.a7FWZva6PIsybw5VYF_EHpofMl0jjTSlR6ojF8GrNA4"
+  }
+  ```
+
+#### POST /api/users/login
+
+- Creates a new user.
+
+- Request Body:
+
+  ```
+  {
+    "name": "navin",
+    "email": "navin@gmail.com",
+    "password": "123456"
+  }
+  ```
+
+- Response json:
+  ```
+  {
+     "id": 5,
+     "name": "navin",
+     "email": "navin@gmail.com",
+     "pics": "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzE5OTE5MzM3LCJleHAiOjE3MjEyMTUzMzd9.a7FWZva6PIsybw5VYF_EHpofMl0jjTSlR6ojF8GrNA4"
+  }
+  ```

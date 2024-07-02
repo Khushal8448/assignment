@@ -41,8 +41,6 @@ const protect = async (
         },
       });
 
-      console.log(req.user);
-
       next();
     } catch (error: any) {
       res.status(401).json({
