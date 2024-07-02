@@ -4,19 +4,25 @@ This repository contains a simple demonstration of a RESTful API built using Exp
 
 ## Table of Contents
 
-- [Express + TypeScript](#express--typescript)
-  - [Table of Contents](#table-of-contents)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [User API Endpoints](#user-api-endpoints)
-    - [POST /api/users/register](#post-apiusersregister)
-    - [POST /api/users/login](#post-apiuserslogin)
-  - [Product API Endpoints](#product-api-endpoints)
-    - [Get All Products](#get-all-products)
-      - [POST /api/product/](#post-apiproduct)
-    - [Add New Product](#add-new-product)
-      - [POST /api/product/](#post-apiproduct-1)
+
+- [Getting Started](#getting-started)
+
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+
+- [User API Endpoints](#userapi-endpoints)
+  - [POST /api/users/register](#post-registeruser)
+  - [POST /api/users/login](#post-loginuser)
+- [Product API Endpoints](#productapi-endpoints)
+  - [POST /api/products/](#get-addNewProduct)
+  - [GET /api/products/](#get-getAllProducts)
+  - [GET /api/products/:productId](#post-getProductDetails)
+  - [PUT /api/products/:productId](#put-updateProductDetails)
+  - [DELETE /api/products/:productId](#delete-deleteProduct)
+- [Error Handling](#error-handling)
+- [Built With](#built-with)
+- [Contact](#contact)
+
 
 ## Getting Started
 
