@@ -112,7 +112,7 @@ This repository contains a simple demonstration of a RESTful API built using Exp
 
 ### Get All Products
 
-#### POST /api/product/
+#### POST /api/products/
 
 - Request Header:
 
@@ -152,7 +152,7 @@ This repository contains a simple demonstration of a RESTful API built using Exp
 
 ### Add New Product
 
-#### POST /api/product/
+#### POST /api/products/
 
 - Request Header:
 
