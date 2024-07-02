@@ -217,3 +217,43 @@ This repository contains a simple demonstration of a RESTful API built using Exp
   }
   ```
 
+  
+### Update Product Details
+
+#### Put /api/products/:productId
+
+- Request Header:
+
+  ```
+  {
+    Authorization: `Bearer ${jwtToken}`,
+  }
+  ```
+
+- Request body:
+  ```
+  {
+    "name": "Ergonomic Office Chair",
+    "description": "Adjustable ergonomic office chair with lumbar support and breathable mesh backrest.",
+    "price": "149.99",
+    "category": "Household",
+    "brand": "Godo",
+    "quantity": 300
+  }
+  ```
+- Response json:
+  ```
+  {
+    "id": 4,
+    "name": "Ergonomic Office Chair",
+    "brand": "Godo",
+    "description": "Adjustable ergonomic office chair with lumbar support and breathable mesh backrest.",
+    "price": "149.99",
+    "quantity": 300,
+    "category": "Household",
+    "createdAt": "2024-07-02T11:47:49.164Z",
+    "updatedAt": "2024-07-02T13:36:38.834Z"
+  }
+  ```
+
+
