@@ -267,6 +267,9 @@ This repository contains a simple demonstration of a RESTful API built using Exp
     Authorization: `Bearer ${jwtToken}`,
   }
   ```
+## Contact
 
+- **Email:** [Email Here](mailto:khushalmali8448@gmail.com)
+- **LinkedIn:** [Khushal Mali](https://www.linkedin.com/in/khushalmali)
 
 
