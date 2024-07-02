@@ -255,5 +255,18 @@ This repository contains a simple demonstration of a RESTful API built using Exp
     "updatedAt": "2024-07-02T13:36:38.834Z"
   }
   ```
+  
+### Delete Product
+
+#### Delete /api/products/:productId
+
+- Request Header:
+
+  ```
+  {
+    Authorization: `Bearer ${jwtToken}`,
+  }
+  ```
+
 
 
