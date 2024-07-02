@@ -4,23 +4,19 @@ This repository contains a simple demonstration of a RESTful API built using Exp
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-
-- [User API Endpoints](#userapi-endpoints)
-  - [POST /api/users/register](#post-registeruser)
-  - [POST /api/users/login](#post-loginuser)
-- [Product API Endpoints](#productapi-endpoints)
-  - [POST /api/products/](#get-addNewProduct)
-  - [GET /api/products/](#get-getAllProducts)
-  - [GET /api/products/:productId](#post-getProductDetails)
-  - [PUT /api/products/:productId](#put-updateProductDetails)
-  - [DELETE /api/products/:productId](#delete-deleteProduct)
-- [Error Handling](#error-handling)
-- [Built With](#built-with)
-- [Contact](#contact)
+- [Express + TypeScript](#express--typescript)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [User API Endpoints](#user-api-endpoints)
+    - [POST /api/users/register](#post-apiusersregister)
+    - [POST /api/users/login](#post-apiuserslogin)
+  - [Product API Endpoints](#product-api-endpoints)
+    - [Get All Products](#get-all-products)
+      - [POST /api/product/](#post-apiproduct)
+    - [Add New Product](#add-new-product)
+      - [POST /api/product/](#post-apiproduct-1)
 
 ## Getting Started
 
@@ -83,7 +79,7 @@ This repository contains a simple demonstration of a RESTful API built using Exp
 
 #### POST /api/users/login
 
-- Creates a new user.
+- Login as existing user.
 
 - Request Body:
 
@@ -103,5 +99,87 @@ This repository contains a simple demonstration of a RESTful API built using Exp
      "email": "navin@gmail.com",
      "pics": "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzE5OTE5MzM3LCJleHAiOjE3MjEyMTUzMzd9.a7FWZva6PIsybw5VYF_EHpofMl0jjTSlR6ojF8GrNA4"
+  }
+  ```
+
+## Product API Endpoints
+
+### Get All Products
+
+#### POST /api/product/
+
+- Request Header:
+
+  ```
+  {
+    Authorization: `Bearer ${jwtToken}`,
+  }
+  ```
+
+- Response json:
+  ```
+  [
+    {
+      "id": 1,
+      "name": "Wireless Bluetooth Headphones",
+      "brand": "SoundMagic",
+      "description": "High-quality wireless headphones with noise cancellation and long battery life.",
+      "price": "99",
+      "quantity": 30,
+      "category": "Electronics",
+      "createdAt": "2024-07-02T08:09:59.459Z",
+      "updatedAt": "2024-07-02T08:09:59.459Z"
+    },
+    {
+      "id": 3,
+      "name": "Smart LED Light Bulb",
+      "brand": "BrightLife",
+      "description": "Energy-efficient smart LED light bulb with adjustable brightness and color settings, compatible with voice assistants.",
+      "price": "28.99",
+      "quantity": 200,
+      "category": "Household",
+      "createdAt": "2024-07-02T08:15:38.951Z",
+      "updatedAt": "2024-07-02T08:49:38.449Z"
+    }
+  ]
+  ```
+
+### Add New Product
+
+#### POST /api/product/
+
+- Request Header:
+
+  ```
+  {
+    Authorization: `Bearer ${jwtToken}`,
+  }
+  ```
+
+- Request Body:
+
+  ```
+  {
+    "name": "Ergonomic Office Chair",
+    "description": "Adjustable ergonomic office chair with lumbar support and breathable mesh backrest.",
+    "price": "149.99",
+    "category": "Household",
+    "brand": "ComfortSeating",
+    "quantity": 300
+  }
+  ```
+
+- Response json:
+  ```
+  {
+    "id": 4,
+    "name": "Ergonomic Office Chair",
+    "brand": "ComfortSeating",
+    "description": "Adjustable ergonomic office chair with lumbar support and breathable mesh backrest.",
+    "price": "149.99",
+    "quantity": 300,
+    "category": "Household",
+    "createdAt": "2024-07-02T11:47:49.164Z",
+    "updatedAt": "2024-07-02T11:47:49.164Z"
   }
   ```
